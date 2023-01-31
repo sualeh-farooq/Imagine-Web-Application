@@ -1,0 +1,76 @@
+.logo {
+  width: 70% !important;
+  height: 100% !important;
+  align-items: center !important;
+}
+
+.theme--light.v-navigation-drawer {
+  background-color: #3c4b64 !important;
+}
+
+.theme--light.v-expansion-panels .v-expansion-panel {
+  background-color: transparent !important;
+}
+
+.theme--light.v-expansion-panels .v-expansion-panel::before {
+  box-shadow: none;
+  align-content: left !important;
+  align-items: left !important;
+}
+
+.v-expansion-panel-header {
+  text-align: left !important;
+  align-items: left !important;
+}
+
+.icon {
+  color: rgb(231, 226, 226) !important;
+}
+
+.menu-btn::before {
+  background-color: gray !important;
+  box-shadow: none !important;
+  width: 100% !important;
+  text-align: left !important;
+}
+
+.menu-btn {
+  color: gray !important;
+  width: 100% !important;
+  text-align: left !important;
+}
+
+.adminIcon:active,
+.adminIcon:focus,
+.adminIcon::before {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.v-list-item__content a {
+  color: white !important;
+}
+
+.theme--light.v-btn.v-btn--disabled.v-btn--has-bg {
+  background-color: #ebedef !important;
+  width: 100% !important;
+  color: black !important;
+  padding: 0% !important;
+  position: relative !important;
+  top: -12px !important;
+  border-bottom-left-radius: 0% !important;
+  border-bottom-right-radius: 0% !important;
+}
+
+.v-btn__content {
+  text-align: left !important;
+}
+
+.v-application--wrap {
+  min-height: auto !important;
+}
+
+.top_nav {
+  position: fixed !important;
+  z-index: 1 !important;
+}/*# sourceMappingURL=dashboard.css.map */
