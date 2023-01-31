@@ -8,9 +8,13 @@ import '@mdi/font/css/materialdesignicons.css'
 import '../node_modules/vuetify/dist/vuetify.min.css'
 import '../node_modules/vuetify/dist/vuetify.css'
 import 'sweetalert2/dist/sweetalert2.min.css';
-import "ant-design-vue/dist/antd.css"; // or 'ant-design-vue/dist/antd.less'
 import sweetalert from './plugins/sweetalert'
-import VueApexCharts from 'vue-apexcharts'
+import VueApexCharts from 'vue-apexcharts';
+import Antd from 'ant-design-vue';
+import "ant-design-vue/dist/antd.css";
+
+
+Vue.use(Antd)
 Vue.use(VueApexCharts)
 Vue.component('apexchart', VueApexCharts)
 

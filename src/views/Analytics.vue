@@ -1,24 +1,31 @@
 <template>
   <div>
- <Dashboard />
- <CardsVue />
-</div>
+    <Dashboard />
+    <v-main>
+      <v-container>
+        <div>
+          <v-row >
+            <v-col > 
+            <h1>Card</h1>
+          </v-col>
+          </v-row>
+        </div>
+      </v-container>
+    </v-main>
+  </div>
 </template>
 
 <script>
-import Dashboard from '@/components/Dashboard.vue';
+import Dashboard from "@/components/Dashboard.vue";
 
-
-import CardsVue from '@/components/Cards.vue';
-  export default {
-    data : ()=>({
-        Hello : 'Hello World',
-    }),
-    name: 'AnalyticsVue',
-    components : {
-      Dashboard,
-      CardsVue,
-    
-    }
-  } 
+export default {
+  data: () => ({
+    Hello: "Hello World",
+  }),
+  name: "AnalyticsVue",
+  components: {
+    Dashboard,
+    // CardsVue,
+  },
+};
 </script>

@@ -58,13 +58,11 @@
 </template>
 
 <script>
-import DataTable from '@/components/DataTable'
-// import Calendar from '@/components/Calendar'
+
 export default {
   name: "CompChrts",
   components : {
-    DataTable,
-    // Calendar
+   
   },
   data: () => ({
     series: [
@@ -239,7 +237,3 @@ export default {
   }),
 };
 </script>
-
-<style>
-@import "../styles/cards.css";
-</style>
