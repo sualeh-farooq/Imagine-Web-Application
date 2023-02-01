@@ -6,7 +6,7 @@
         <div>
           <v-row >
             <v-col > 
-            <h1>Card</h1>
+            <!-- <h1>Card</h1> -->
           </v-col>
           </v-row>
         </div>

@@ -1,31 +1,27 @@
-@import './variable.scss';
-
-
-
-
+@import "./variable.scss";
 
 .logo {
-    width: 70% !important;
-    height:  100% !important;
-    align-items: center !important;
+  width: 90% !important;
+  height: 100% !important;
+  align-items: center !important;
 }
 .theme--light.v-navigation-drawer {
-    background-color: $fade-blue !important;
+  background-color: red !important;
+  background-image: linear-gradient(to bottom, #0a599b, #58a2e0);
 }
 
 .theme--light.v-expansion-panels .v-expansion-panel {
-    background-color: transparent !important;
-    
+  background-color: transparent !important;
 }
 .theme--light.v-expansion-panels .v-expansion-panel::before {
-    box-shadow:  none;
-    align-content: left !important;
-    align-items: left !important;
+  box-shadow: none;
+  align-content: left !important;
+  align-items: left !important;
 }
 
 .v-expansion-panel-header {
-    text-align: left !important;
-    align-items: left !important;
+  text-align: left !important;
+  align-items: left !important;
 }
 // .v-list-item--link {
 //     color: rgb(231, 226, 226) !important;
@@ -33,62 +29,74 @@
 // }
 
 .icon {
-    color: rgb(231, 226, 226) !important;
+  color: rgb(231, 226, 226) !important;
 }
 
-
 .menu-btn::before {
-    background-color: gray !important;
-    box-shadow: none !important;
-    width: 100% !important;
-    text-align: left !important;
+  background-color: gray !important;
+  box-shadow: none !important;
+  width: 100% !important;
+  text-align: left !important;
 }
 
 .menu-btn {
-    color: gray !important;    
-    width: 100% !important;
-    text-align: left !important;
+  color: gray !important;
+  width: 100% !important;
+  text-align: left !important;
 }
 
-.adminIcon:active ,
+.adminIcon:active,
 .adminIcon:focus,
 .adminIcon::before {
-    background-color: transparent !important;
-    box-shadow: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
 }
-
 
 .v-list-item__content {
-    a {
-        color: $dashboard-text-color !important;
-    }
+  a {
+    color: $dashboard-text-color !important;
+  }
 }
 
-
-.theme--light.v-btn.v-btn--disabled.v-btn--has-bg  {
-    background-color: $admin-nav-head-bg !important;
-    width: 100% !important;
-    // color: $admin-nav-text-color !important;
-    color: black !important;
-    padding: 0% !important;
-    position: relative !important;
-    top: -12px !important;
-    border-bottom-left-radius: 0% !important;
-    border-bottom-right-radius: 0% !important;
+.theme--light.v-btn.v-btn--disabled.v-btn--has-bg {
+  background-color: $admin-nav-head-bg !important;
+  width: 100% !important;
+  // color: $admin-nav-text-color !important;
+  color: black !important;
+  padding: 0% !important;
+  position: relative !important;
+  top: -12px !important;
+  border-bottom-left-radius: 0% !important;
+  border-bottom-right-radius: 0% !important;
 }
-
 
 .v-btn__content {
-    text-align: left !important;
+  text-align: left !important;
 }
 
 .v-application--wrap {
-    min-height: auto !important;
+  min-height: auto !important;
 }
 
-
-
-.top_nav{
-    position: fixed !important;
-    z-index: 1 !important;
+.top_nav {
+  position: fixed !important;
+  z-index: 1 !important;
 }
+
+.nav-btn:hover {
+  background-color: transparent !important;
+}
+
+.nav-btn:active {
+  background-color: transparent !important;
+}
+
+.v-list-item-group {
+  .v-list-item--active {
+    background-color: transparent !important;
+  }
+  .v-list-item--active:hover {
+    background-color: transparent !important;
+  }
+}
+

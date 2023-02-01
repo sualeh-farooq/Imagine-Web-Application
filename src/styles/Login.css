@@ -1,1 +1,60 @@
-/*# sourceMappingURL=Login.css.map */
+@font-face {
+  font-family: "Poppins_Regular";
+  src: url("../assets/fonts/poppins/Poppins-Regular.ttf");
+}
+.v-main .v-main__wrap .container .row {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-direction: row !important;
+  width: 100vw !important;
+}
+.v-main .v-main__wrap .container .row .login_fields {
+  width: 50%;
+  margin-top: 10%;
+  flex: 1 !important;
+}
+.v-main .v-main__wrap .container .row .login_fields div .ant-form .ant-row .ant-form-item-control-wrapper .ant-form-item-control .ant-form-item-children {
+  display: block !important;
+  width: 80% !important;
+}
+.v-main .v-main__wrap .container .row .login_fields div .ant-form .ant-row .ant-form-item-control-wrapper .ant-form-item-control .ant-form-item-children input {
+  padding: 10px !important;
+}
+.v-main .v-main__wrap .container .row .login_fields .logo_div {
+  width: 100%;
+  height: 100% !important;
+  margin: auto 0px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.v-main .v-main__wrap .container .row .login_fields .logo_div .theme--light.v-image {
+  align-items: center !important;
+  margin: 0 auto !important;
+}
+.v-main .v-main__wrap .container .row .bgwhite {
+  padding: 0 10px !important;
+  border-right: 0.2px solid #002d62 !important;
+}
+.v-main .v-main__wrap .container .row .bgwhite div .ant-form-horizontal h2 {
+  font-family: "Poppins_Regular" !important;
+  font-weight: 600 !important;
+}
+.v-main .v-main__wrap .container .row .bgwhite div .ant-form-horizontal .ant-form-item .ant-form-item-control-wrapper .ant-form-item-control .ant-form-item-children button {
+  width: 100% !important;
+  background-color: #3576AB !important;
+  border: none !important;
+  outline: none !important;
+}
+.v-main .v-main__wrap .container .row .bgwhite div .ant-form-horizontal .ant-form-item .ant-form-item-control-wrapper .ant-form-item-control .ant-form-item-children button:active {
+  background-color: #4299e0 !important;
+  transition: 2s !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.v-main .v-main__wrap .container .row .bgoff {
+  padding: 0 10px !important;
+  border-left: 0.2px solid #002d62 !important;
+  padding-left: 5% !important;
+}/*# sourceMappingURL=Login.css.map */

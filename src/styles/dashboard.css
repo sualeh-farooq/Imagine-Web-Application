@@ -1,11 +1,16 @@
+@font-face {
+  font-family: "Poppins_Regular";
+  src: url("../assets/fonts/poppins/Poppins-Regular.ttf");
+}
 .logo {
-  width: 70% !important;
+  width: 90% !important;
   height: 100% !important;
   align-items: center !important;
 }
 
 .theme--light.v-navigation-drawer {
-  background-color: #3c4b64 !important;
+  background-color: red !important;
+  background-image: linear-gradient(to bottom, #0a599b, #58a2e0);
 }
 
 .theme--light.v-expansion-panels .v-expansion-panel {
@@ -73,4 +78,19 @@
 .top_nav {
   position: fixed !important;
   z-index: 1 !important;
+}
+
+.nav-btn:hover {
+  background-color: transparent !important;
+}
+
+.nav-btn:active {
+  background-color: transparent !important;
+}
+
+.v-list-item-group .v-list-item--active {
+  background-color: transparent !important;
+}
+.v-list-item-group .v-list-item--active:hover {
+  background-color: transparent !important;
 }/*# sourceMappingURL=dashboard.css.map */
