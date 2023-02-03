@@ -139,4 +139,58 @@
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+}
+.v-main .v-main__wrap .container-fluid .row .col .card {
+  max-width: 220px !important;
+  background-image: linear-gradient(to right, #3577AC, #56A1DF);
+  max-height: -webkit-max-content !important;
+  max-height: -moz-max-content !important;
+  max-height: max-content !important;
+  color: white !important;
+}
+.v-main .v-main__wrap .container-fluid .row .col .card .row .col .card-body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.v-main .v-main__wrap .container-fluid .row .col .card .row .col .card-body span {
+  font-size: x-large !important;
+  font-family: "Poppins_Regular";
+  font-weight: 600;
+  position: absolute;
+  margin: 0 20px !important;
+  text-align: right;
+}
+.v-main .v-main__wrap .container-fluid .row .col .card .row .col .card-body p {
+  font-family: "Poppins_Regular";
+  font-weight: 400;
+}
+.v-main .v-main__wrap .container-fluid .row .col .card .row .col .card-body svg {
+  width: 30px !important;
+  height: 30px !important;
+}
+.v-main .v-main__wrap .container-fluid .second_row {
+  position: relative;
+  margin: 10px 5px;
+}
+.v-main .v-main__wrap .container-fluid .third_row {
+  position: relative;
+  margin: 10px 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.v-main .v-main__wrap .container-fluid .third_row .col {
+  display: flex !important;
+  flex-direction: column !important;
+}
+.v-main .v-main__wrap .container-fluid .third_row .third_row_child1 {
+  flex: 2;
+}
+.v-main .v-main__wrap .container-fluid .third_row .third_row_child2 {
+  flex: 1;
+}
+.v-main .v-main__wrap .container-fluid .third_row .third_row_child2 h4 {
+  font-family: "Poppins_Regular";
+  font-weight: 600;
 }/*# sourceMappingURL=dashboard.css.map */

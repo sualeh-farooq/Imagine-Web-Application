@@ -1,5 +1,11 @@
 @import "./variable.scss";
 
+@mixin rowSetting{
+  // border: 2px solid red;
+        position: relative;
+        margin: 10px 5px;
+}
+
 .logo {
   width: 90% !important;
   height: 100% !important;
@@ -167,10 +173,74 @@
             justify-content: space-evenly;
             flex-wrap: wrap;
           }
-          
         }
 
+        // Second Row Styling
+        .col {
+          .card{
+            max-width: 220px !important;
+            // background-color: red !important;
+            background-image: $rtl-gradient ;
+            max-height: max-content !important;
+            color: white !important;
+
+            .row {
+              .col {
+                .card-body {
+                  // border: 2px solid red;
+                  height: 100%;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-around;
+                  span {
+                    font-size: x-large !important;
+                    font-family: $regular-font;
+                    font-weight: 600;
+                    // border: 2px solid whitesmoke;
+                    position: absolute;
+                    margin: 0 20px !important;
+                    text-align: right;
+                  }
+                  p{
+                    font-family: $regular-font;
+                    font-weight: 400;
+                  }
+                  svg{
+                    width: 30px !important;
+                    height: 30px !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+        
+      }
+      .second_row {
+      @include rowSetting
+      }
+      .third_row {
+        @include rowSetting;
+        display: flex;
+        flex-wrap: wrap ;
+        .col {
+          display : flex  !important;
+          flex-direction: column !important;
+          // border: 2px solid rebeccapurple;
+        }
+        .third_row_child1 {
+          flex: 2;
+        }
+        .third_row_child2{
+          flex: 1;
+          h4{
+            font-family: $regular-font;
+            font-weight: 600;
+          }
+        }
       }
     }
   }
 }
+
+
