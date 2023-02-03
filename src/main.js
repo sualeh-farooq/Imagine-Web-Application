@@ -12,8 +12,12 @@ import sweetalert from './plugins/sweetalert'
 import VueApexCharts from 'vue-apexcharts';
 import Antd from 'ant-design-vue';
 import "ant-design-vue/dist/antd.css";
+import {BootstrapVue , IconsPlugin} from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
-
+Vue.use(BootstrapVue)
+Vue.use(IconsPlugin)
 Vue.use(Antd)
 Vue.use(VueApexCharts)
 Vue.component('apexchart', VueApexCharts)

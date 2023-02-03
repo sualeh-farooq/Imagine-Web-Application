@@ -7,7 +7,7 @@
 }
 .theme--light.v-navigation-drawer {
   background-color: red !important;
-  background-image: linear-gradient(to bottom, #0a599b, #58a2e0);
+  background-image: linear-gradient(to bottom, $primary-color, #58a2e0);
 }
 
 .theme--light.v-expansion-panels .v-expansion-panel {
@@ -100,3 +100,77 @@
   }
 }
 
+
+.v-application--wrap{
+  .top_nav {
+    .v-toolbar__content{
+      .ant-switch-checked {
+        background-color: $primary-color!important;
+      }
+    }
+  }
+}
+
+
+
+.v-main {
+  .v-main__wrap {
+    .container-fluid{
+      .main-bg {
+        margin-top: 2% ;
+        // background-color: rgb(238, 235, 235) !important;
+        background-color: white !important;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        border-radius: 10px !important;
+      }
+      .row{
+        .col {
+          .main-heading{
+            font-family: $regular-font;
+            font-weight: 600;
+            font-size: 25px ;
+            padding-left: 5%;
+          }
+          span {
+            .search-btn {
+              background-color:  $primary-color!important;
+              .v-icon {
+                color: white !important;
+              }
+            }
+            .search-btn:active{
+              background-color:  #0f7ed9 !important;
+              
+            }
+            input {
+              border: 2px solid $primary-color;
+              padding: 5px;
+              font-size: small;
+              border-radius: 0%;
+              width: 80%;
+            }
+            input:focus{
+              border: 2px solid $primary-color!important;
+              // border: none !important;
+              outline: none !important;
+              // box-shadow: none !important;
+            }
+            input:active{
+              border: 2px solid $primary-color!important;
+              outline: none !important;
+            }
+          }
+
+          .search-space{
+            display: flex ;
+            // border: 2px solid red;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+          }
+          
+        }
+
+      }
+    }
+  }
+}
