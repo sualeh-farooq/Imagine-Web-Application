@@ -104,7 +104,7 @@
               ></iframe>
             </b-col>
             <b-col class="third_row_child2">
-              <h5>Clients</h5>
+              <h6>Clients</h6>
               <apexchart
                 title="Clients"
                 type="bar"
@@ -120,7 +120,14 @@
 
           <b-row class="fourth_row">
             <b-col class="fourth_row_child1">
-              <b-col style="{border: 2px solid red;}"><h5>Opportunities</h5></b-col>
+              <b-col
+                style="
+                   {
+                    border: 2px solid red;
+                  }
+                "
+                ><h6>Opportunities</h6></b-col
+              >
               <v-data-table
                 v-model="selected"
                 :headers="headers"
@@ -128,18 +135,13 @@
                 :single-select="singleSelect"
                 item-key="name"
                 show-select
-                class="elevation-1" >
+                class="elevation-1"
+              >
               </v-data-table>
-                <!-- <v-chip
-          :color="getColor(item.priority)"
-          dark
-          v-bind:style="{ 'background-color': 'red', 'color ': 'pink' , 'text-align' : 'center' }"
-        >
-          {{ item.priority }}
-        </v-chip> -->
             </b-col>
+
             <b-col class="fourth_row_child2">
-              <h5>Recent Activity</h5>
+              <h6>Recent Activity</h6>
               <!-- <apexchart
                 title="Clients"
                 type="bar"
@@ -149,50 +151,24 @@
                 :series="series"
               >
               </apexchart> -->
-              <b-card no-body>
-                <b-row no-gutters>
+              <b-card class="act-card" >
+                <b-row v-for="data in ActivityData" :key="data">
                   <b-col>
-                    <b-card-body>
-                      <svg-icon type="mdi" :path="accountIcon"></svg-icon>
-                      <b-card-text> Prospects </b-card-text>
-                    </b-card-body>
+                    <v-avatar size="40">
+                      <img
+                        :src=data.img
+                        alt="John"
+                      />
+                    </v-avatar>
+                  </b-col>
+                  <b-col class="det">
+                    <p> {{ data.log }} <br /><small> {{ data.date }} </small> </p>
                   </b-col>
                   <b-col>
-                    <b-card-body>
-                      <span>22</span>
-                    </b-card-body>
-                  </b-col>
-                </b-row>
-              </b-card>
-              <b-card no-body>
-                <b-row no-gutters>
-                  <b-col>
-                    <b-card-body>
-                      <svg-icon type="mdi" :path="accountIcon"></svg-icon>
-                      <b-card-text> Prospects </b-card-text>
-                    </b-card-body>
-                  </b-col>
-                  <b-col>
-                    <b-card-body>
-                      <span>22</span>
-                    </b-card-body>
+                  <v-icon>{{ data.icon }}</v-icon>
                   </b-col>
                 </b-row>
-              </b-card>
-              <b-card no-body>
-                <b-row no-gutters>
-                  <b-col>
-                    <b-card-body>
-                      <svg-icon type="mdi" :path="accountIcon"></svg-icon>
-                      <b-card-text> Prospects </b-card-text>
-                    </b-card-body>
-                  </b-col>
-                  <b-col>
-                    <b-card-body>
-                      <span>22</span>
-                    </b-card-body>
-                  </b-col>
-                </b-row>
+                
               </b-card>
             </b-col>
           </b-row>
@@ -206,9 +182,13 @@
 import Dashboard from "@/components/Dashboard.vue";
 import SvgIcon from "@jamescoyle/vue-icon";
 import { mdiAccountMultiple } from "@mdi/js";
+import Albert from '../assets/albert.png'
+import Avatar from '../assets/avatar.jpg'
 
 export default {
   data: () => ({
+    AvatarPic : Avatar,
+    AlbertPic : Albert,
     Hello: "Hello World",
     text: "",
     accountIcon: mdiAccountMultiple,
@@ -241,46 +221,65 @@ export default {
       },
     },
     singleSelect: false,
-        selected: [],
-        headers: [
-          {
-            text: 'Name',
-            align: 'start',
-            sortable: false,
-            value: 'name',
-          },
-          { text: 'Line of business', value: 'business' ,sortable: false,},
-          { text: 'Estimated Close date', value: 'estimate' ,sortable: false},
-          { text: 'Probability', value: 'prob',sortable: false, align:'center'  },
-     
-        ],
-        desserts: [
-          {
-            name: 'Melissa John',
-            business: 'Home rental Insurance',
-            estimate: '20/January/2023',
-            prob: '33'
-          },
-          {
-            name: 'Melissa John',
-            business: 'Home rental Insurance',
-            estimate: '20/January/2023',
-            prob: '33'
-          },
-          {
-            name: 'Melissa John',
-            business: 'Home rental Insurance',
-            estimate: '20/January/2023',
-            prob: '33'
-          },
-          {
-            name: 'Melissa John',
-            business: 'Home rental Insurance',
-            estimate: '20/January/2023',
-            prob: '33'
-          },
-         
-        ],
+    selected: [],
+    headers: [
+      {
+        text: "Name",
+        align: "start",
+        sortable: false,
+        value: "name",
+      },
+      { text: "Line of business", value: "business", sortable: false },
+      { text: "Estimated Close date", value: "estimate", sortable: false },
+      { text: "Probability", value: "prob", sortable: false, align: "center" },
+    ],
+    desserts: [
+      {
+        name: "Melissa John",
+        business: "Home rental Insurance",
+        estimate: "20/January/2023",
+        prob: "33",
+      },
+      {
+        name: "Melissa John",
+        business: "Home rental Insurance",
+        estimate: "20/January/2023",
+        prob: "33",
+      },
+      {
+        name: "Melissa John",
+        business: "Home rental Insurance",
+        estimate: "20/January/2023",
+        prob: "33",
+      },
+      {
+        name: "Melissa John",
+        business: "Home rental Insurance",
+        estimate: "20/January/2023",
+        prob: "33",
+      },
+    ],
+
+    ActivityData : [
+      {
+        img : Albert,
+        log : 'Albert Logged-In',
+        date : '28 August 2022',
+        icon : 'mdi-key-alert'
+      },
+      {
+        img : 'https://cdn.vuetifyjs.com/images/john.jpg',
+        log : 'Anna Logout',
+        date : '20 August 2022',
+        icon : 'mdi-logout'
+      },{
+        img : Avatar,
+        log : 'Susan Changed Password',
+        date : '19 August 2022',
+        icon : 'mdi-lock-outline'
+      }
+    ]
+   
   }),
   name: "AnalyticsVue",
   components: {
