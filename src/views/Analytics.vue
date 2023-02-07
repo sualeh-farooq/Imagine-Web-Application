@@ -90,8 +90,7 @@
               </b-card>
             </b-col>
           </b-row>
-          <!--Third Row  |Video Row -->
-
+          <!--Third Row  | Video Row -->
           <b-row class="third_row">
             <b-col class="third_row_child1">
               <!-- <iframe src="https://www.youtube.com/watch?v=mYqyTvkuVXY"></iframe> -->
@@ -105,7 +104,7 @@
               ></iframe>
             </b-col>
             <b-col class="third_row_child2">
-              <h4>Clients</h4>
+              <h5>Clients</h5>
               <apexchart
                 title="Clients"
                 type="bar"
@@ -115,6 +114,86 @@
                 :series="series"
               >
               </apexchart>
+            </b-col>
+          </b-row>
+          <!--Fourth Row  | Table Row -->
+
+          <b-row class="fourth_row">
+            <b-col class="fourth_row_child1">
+              <b-col style="{border: 2px solid red;}"><h5>Opportunities</h5></b-col>
+              <v-data-table
+                v-model="selected"
+                :headers="headers"
+                :items="desserts"
+                :single-select="singleSelect"
+                item-key="name"
+                show-select
+                class="elevation-1" >
+              </v-data-table>
+                <!-- <v-chip
+          :color="getColor(item.priority)"
+          dark
+          v-bind:style="{ 'background-color': 'red', 'color ': 'pink' , 'text-align' : 'center' }"
+        >
+          {{ item.priority }}
+        </v-chip> -->
+            </b-col>
+            <b-col class="fourth_row_child2">
+              <h5>Recent Activity</h5>
+              <!-- <apexchart
+                title="Clients"
+                type="bar"
+                height="100%"
+                width="100%"
+                :options="chartOptions"
+                :series="series"
+              >
+              </apexchart> -->
+              <b-card no-body>
+                <b-row no-gutters>
+                  <b-col>
+                    <b-card-body>
+                      <svg-icon type="mdi" :path="accountIcon"></svg-icon>
+                      <b-card-text> Prospects </b-card-text>
+                    </b-card-body>
+                  </b-col>
+                  <b-col>
+                    <b-card-body>
+                      <span>22</span>
+                    </b-card-body>
+                  </b-col>
+                </b-row>
+              </b-card>
+              <b-card no-body>
+                <b-row no-gutters>
+                  <b-col>
+                    <b-card-body>
+                      <svg-icon type="mdi" :path="accountIcon"></svg-icon>
+                      <b-card-text> Prospects </b-card-text>
+                    </b-card-body>
+                  </b-col>
+                  <b-col>
+                    <b-card-body>
+                      <span>22</span>
+                    </b-card-body>
+                  </b-col>
+                </b-row>
+              </b-card>
+              <b-card no-body>
+                <b-row no-gutters>
+                  <b-col>
+                    <b-card-body>
+                      <svg-icon type="mdi" :path="accountIcon"></svg-icon>
+                      <b-card-text> Prospects </b-card-text>
+                    </b-card-body>
+                  </b-col>
+                  <b-col>
+                    <b-card-body>
+                      <span>22</span>
+                    </b-card-body>
+                  </b-col>
+                </b-row>
+              </b-card>
             </b-col>
           </b-row>
         </div>
@@ -127,7 +206,6 @@
 import Dashboard from "@/components/Dashboard.vue";
 import SvgIcon from "@jamescoyle/vue-icon";
 import { mdiAccountMultiple } from "@mdi/js";
-// import ApexCharts from "apexcharts";
 
 export default {
   data: () => ({
@@ -152,7 +230,7 @@ export default {
         enabled: false,
       },
       fill: {
-        colors: [ "#0A599B", "#097bd8"],
+        colors: ["#0A599B", "#097bd8"],
       },
       stroke: {
         curve: "straight",
@@ -162,6 +240,47 @@ export default {
         categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
       },
     },
+    singleSelect: false,
+        selected: [],
+        headers: [
+          {
+            text: 'Name',
+            align: 'start',
+            sortable: false,
+            value: 'name',
+          },
+          { text: 'Line of business', value: 'business' ,sortable: false,},
+          { text: 'Estimated Close date', value: 'estimate' ,sortable: false},
+          { text: 'Probability', value: 'prob',sortable: false, align:'center'  },
+     
+        ],
+        desserts: [
+          {
+            name: 'Melissa John',
+            business: 'Home rental Insurance',
+            estimate: '20/January/2023',
+            prob: '33'
+          },
+          {
+            name: 'Melissa John',
+            business: 'Home rental Insurance',
+            estimate: '20/January/2023',
+            prob: '33'
+          },
+          {
+            name: 'Melissa John',
+            business: 'Home rental Insurance',
+            estimate: '20/January/2023',
+            prob: '33'
+          },
+          {
+            name: 'Melissa John',
+            business: 'Home rental Insurance',
+            estimate: '20/January/2023',
+            prob: '33'
+          },
+         
+        ],
   }),
   name: "AnalyticsVue",
   components: {
