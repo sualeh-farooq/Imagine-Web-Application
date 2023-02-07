@@ -243,16 +243,18 @@
   padding: 64px 0px 0px 50px !important;
 }
 
+.setMain {
+  padding: 64px 0px 0px 60px !important;
+}
+
 .v-main .v-main__wrap .container-fluid {
   width: auto;
   margin-left: -5% !important;
 }
 .v-main .v-main__wrap .container-fluid .main-bg {
   margin-top: 2%;
-  background-color: white !important;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   border-radius: 10px !important;
-  left: -5%;
 }
 .v-main .v-main__wrap .container-fluid .row .col .main-heading {
   font-family: "Poppins_Regular";
@@ -361,6 +363,7 @@
 }
 .v-main .v-main__wrap .container-fluid .fourth_row .fourth_row_child2 {
   flex: 1;
+  margin-top: 15px !important;
 }
 .v-main .v-main__wrap .container-fluid .fourth_row .fourth_row_child2 .act-card {
   background-image: none !important;

@@ -2,7 +2,7 @@
   <v-app id="inspire">
     <!-- Top Bar / Header-->
     <v-app-bar app absolute color="white" class="top_nav">
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click="drawerTog() ; setScreen()"></v-app-bar-nav-icon>
       <v-spacer></v-spacer>
 
       <a-switch :v-model="checked1" @click="change1" />
@@ -149,12 +149,7 @@ export default defineComponent({
         "warning"
       );
     },
-    // setup() {
-    //   const checked = ref(true)
-    //   return {
-    //     checked
-    //   }
-    // },
+   
 
     toggle(event) {
       if (this.btnClass === "red-color") {
@@ -173,6 +168,14 @@ export default defineComponent({
       }
       console.log(event);
     },
+    setScreen() {
+      console.log('Clicked')
+      let container = document.getElementsByClassName('v-main')
+      container[0].classList.toggle('setMain')
+    },
+    drawerTog(){
+      this.drawer = !this.drawer
+    }
     
   },
 
