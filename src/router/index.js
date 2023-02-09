@@ -18,7 +18,7 @@ const routes = [
    {
     path: "/cards",
     name : 'CardsVue',
-    component : ()=>import('../views/HomeView.vue')
+    component : ()=>import('../views/cards.vue')
    },
    {
     path: "/forms",

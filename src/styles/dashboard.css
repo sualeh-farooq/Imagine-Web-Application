@@ -169,6 +169,17 @@
   text-decoration: none !important;
 }
 
+.text-center .v-divider {
+  padding: 0px !important;
+}
+
+.menu-btn {
+  padding: 0px 8px !important;
+  font-size: small !important;
+  margin-top: -10px !important;
+  color: black !important;
+}
+
 .v-application--wrap .top_nav .v-toolbar__content .ant-switch-checked {
   background-color: #0A599B !important;
 }
@@ -296,7 +307,6 @@
 .v-main .v-main__wrap .container-fluid .row .col .card {
   max-width: 220px !important;
   background-image: linear-gradient(to right, #3577AC, #56A1DF);
-  max-height: -webkit-max-content !important;
   max-height: -moz-max-content !important;
   max-height: max-content !important;
   color: white !important;

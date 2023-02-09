@@ -13,8 +13,6 @@
         <svg-icon type="mdi" color="#0A599B" :path="bellIcon"></svg-icon>
       </v-btn>
  
-
-
       <v-menu
           bottom
           min-width="100px"
@@ -28,36 +26,35 @@
           </template>
 
                 <!--List Menu after open -->
-          <v-card>
-            <v-list-item-content class="justify-center">
+                <v-card>
+          <v-list-item-content class="justify-center">
+            <div class="text-center">
               <v-btn
-                depressed
                 text
+                max-width="100%"
+                class="menu-btn"
               >
                 Page Manager
               </v-btn>
+              <v-divider ></v-divider>
               <v-btn
-                depressed
+              max-width="100%"
+              class="menu-btn"
                 text
               >
                 Custom Text
               </v-btn>
+              <v-divider ></v-divider>
+
               <v-btn
-                depressed
                 text
+                class="menu-btn"
               >
-                Site Setting Account
+                Site Settings
               </v-btn>
-              <v-btn
-                depressed
-                text
-              >
-                Edit Account
-              </v-btn>
-              <v-divider class="my-3"></v-divider>
-     
+            </div>
           </v-list-item-content>
-          </v-card>
+        </v-card>
         </v-menu>
     </v-app-bar>
     <!-- Top Bar / Header End-->
@@ -81,7 +78,7 @@
           </v-btn>
         </router-link>
 
-        <router-link class="link" to="/dashboard">
+        <router-link class="link" to="/cards">
           <v-btn medium :class="[btnClass2, 'my-btn2']" @click="btnToggle">
             <div class="border-line"></div>
             <v-icon class="icon" small v-text="agent"></v-icon>

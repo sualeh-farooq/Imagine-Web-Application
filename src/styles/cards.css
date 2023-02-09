@@ -2,32 +2,69 @@
   font-family: "Poppins_Regular";
   src: url("../assets/fonts/poppins/Poppins-Regular.ttf");
 }
-.v-main .v-main__wrap .container .main_div .chart_third_row .col {
-  margin: 3% 0% !important;
+@font-face {
+  font-family: "Poppins_Regular";
+  src: url("../assets/fonts/poppins/Poppins-Regular.ttf");
 }
-.v-main .v-main__wrap .container .main_div .chart_second_row .col .v-card .apexcharts-canvas .apexcharts-toolbar {
-  display: none !important;
+.agent-bg .main-row .row .col-12 .main-heading {
+  font-family: "Poppins_Regular";
+  font-weight: 600;
+  font-size: 25px;
+  padding-left: 3%;
+  margin: 5px 0px;
 }
-.v-main .v-main__wrap .container .main_div .chart_upper_row {
-  display: flex !important;
-  flex-wrap: wrap !important;
+.agent-bg .main-row .row .col-12 .v-data-table {
+  margin: 0px 0px;
 }
-.v-main .v-main__wrap .container .main_div .chart_upper_row .col {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  justify-content: space-between !important;
+.agent-bg .main-row .row .col-12 .v-data-table .v-data-table__wrapper table {
+  z-index: 1;
 }
-.v-main .v-main__wrap .container .main_div .chart_upper_row .col .v-card {
-  margin: 10px !important;
+.agent-bg .main-row .row .col-12 .v-data-table .v-data-table__wrapper table tbody tr .v-avatar {
+  margin-right: 10px;
 }
-.v-main .v-main__wrap .container .main_div .chart_upper_row .col .v-card .apexcharts-canvas .apexcharts-toolbar {
-  display: none !important;
+.agent-bg .main-row .row .col-12 .v-data-table .v-data-table__wrapper table tbody tr td a {
+  text-decoration: none !important;
 }
-
-@media only screen and (max-width: 672px) {
-  .v-main .v-main__wrap .container .main_div .chart_upper_row {
-    display: flex !important;
-    justify-content: center !important;
-    flex-wrap: wrap !important;
-  }
+.agent-bg .main-row .row .table-col {
+  margin: 20px 5px;
+}
+.agent-bg .main-row .row .btn-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10px 0px;
+}
+.agent-bg .main-row .row .btn-row .v-btn {
+  background-color: #3576AB;
+  color: white;
+  text-transform: capitalize;
+}
+.agent-bg .main-row .row .btn-row input {
+  width: 60%;
+  border: 1px solid #0A599B;
+  border-radius: 2px;
+  outline: none;
+  padding: 0px 10px;
+}
+.agent-bg .main-row .row .btn-row input:focus {
+  outline: none !important;
+  border: 1px solid #0A599B;
+  border-radius: 2px;
+  padding: 0px 10px;
+}
+.agent-bg .main-row .row .btn-row input:active {
+  outline: none !important;
+  border: 1px solid #0A599B;
+  border-radius: 2px;
+  padding: 0px 10px;
+}
+.agent-bg .main-row .row .btn-row-2 {
+  margin: 10px 0px;
+  display: flex;
+  justify-content: flex-end;
+}
+.agent-bg .main-row .row .btn-row-2 .v-btn {
+  color: white;
+  text-transform: capitalize;
+  background-color: #3576AB;
 }/*# sourceMappingURL=cards.css.map */

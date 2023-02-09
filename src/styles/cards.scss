@@ -1,61 +1,91 @@
-@import "../styles//variable.scss";
+@font-face {
+  font-family: "Poppins_Regular";
+  src: url("../assets/fonts/poppins/Poppins-Regular.ttf");
+}
 
-.v-main {
-  .v-main__wrap {
-    .container {
-      .main_div {
-        .chart_third_row {
-            .col {
-                margin: 3% 0%!important;
-            }
+@import './variable.scss';
+
+.agent-bg{
+  .main-row{
+    .row{
+      .col-12{
+        .main-heading{
+          font-family: "Poppins_Regular";
+          font-weight: 600;
+          font-size: 25px;
+          padding-left: 3%;
+          margin: 5px 0px ;
         }
-        .chart_second_row{
-            .col{
-                .v-card{
-                    .apexcharts-canvas {
-                        .apexcharts-toolbar {
-                            display: none !important;
-                        }
+
+        .v-data-table{
+          margin: 0px 0px ;
+          .v-data-table__wrapper{
+            table{
+              // border: 2px solid red;
+              z-index: 1;
+              tbody{
+                tr{
+                  .v-avatar{
+                    margin-right: 10px;
+                  }
+                  td{
+                    a{
+                      text-decoration: none !important;
                     }
-                }
-            }
-        }
-        .chart_upper_row {
-          //   background-color: rgb(224, 217, 217)(238, 238, 238) !important;
-          display: flex !important;
-          flex-wrap: wrap !important;
-          .col {
-            display: flex !important;
-            flex-wrap: wrap !important;
-            justify-content: space-between !important;
-
-            .v-card {
-              margin: 10px !important;
-              .apexcharts-canvas {
-                .apexcharts-toolbar {
-                  display: none !important;
+                  }
                 }
               }
             }
           }
         }
       }
-    }
-  }
-}
+      
+      .table-col{
+        margin: 20px 5px;
+      }
+      .btn-row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        // border: 2px solid red;
+        margin: 10px 0px;
+        .v-btn {
+          background-color: $primary-btn-color;
+          color:white;
+          text-transform: capitalize;
+        }
+        input{
+          width: 60%;
+          border: 1px solid $primary-color;
+          border-radius: 2px;
+          outline: none;
+          padding: 0px 10px;
+        }
+        input:focus{
+          outline: none !important;
+          border: 1px solid $primary-color;
+          border-radius: 2px;
+          padding: 0px 10px;
 
+          
+        }
+        input:active{
+          outline: none !important;
+          border: 1px solid $primary-color;
+          border-radius: 2px;
+          padding: 0px 10px;
 
+        }
+      }
+      .btn-row-2{
+        margin: 10px 0px;
+        display: flex;
+        justify-content: flex-end;
+        .v-btn {
+          color:white;
+          text-transform: capitalize;
 
-@media only screen and (max-width: 672px) {
-  .v-main {
-    .v-main__wrap {
-      .container {
-        .main_div {
-          .chart_upper_row {
-            display: flex !important;
-            justify-content: center !important; 
-            flex-wrap: wrap !important;
-          }
+          background-color: $primary-btn-color;
         }
       }
     }
