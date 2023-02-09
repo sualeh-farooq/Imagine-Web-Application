@@ -12,9 +12,53 @@
       <v-btn icon>
         <svg-icon type="mdi" color="#0A599B" :path="bellIcon"></svg-icon>
       </v-btn>
-      <v-btn icon>
+ 
+
+
+      <v-menu
+          bottom
+          min-width="100px"
+          rounded
+          offset-y
+        >
+          <template v-slot:activator="{ on }">
+            <v-btn v-on="on" icon>
         <svg-icon type="mdi" color="#0A599B" :path="setting"></svg-icon>
       </v-btn>
+          </template>
+
+                <!--List Menu after open -->
+          <v-card>
+            <v-list-item-content class="justify-center">
+              <v-btn
+                depressed
+                text
+              >
+                Page Manager
+              </v-btn>
+              <v-btn
+                depressed
+                text
+              >
+                Custom Text
+              </v-btn>
+              <v-btn
+                depressed
+                text
+              >
+                Site Setting Account
+              </v-btn>
+              <v-btn
+                depressed
+                text
+              >
+                Edit Account
+              </v-btn>
+              <v-divider class="my-3"></v-divider>
+     
+          </v-list-item-content>
+          </v-card>
+        </v-menu>
     </v-app-bar>
     <!-- Top Bar / Header End-->
 
